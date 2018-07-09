@@ -1,0 +1,23 @@
+ul.list {
+  color: salmon;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li.item:hover {
+  border-bottom: 1px solid salmon;
+}
+
+li.item a {
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+li.item a.active {
+  background: #333;
+  border-bottom: 1px solid salmon;
+}
