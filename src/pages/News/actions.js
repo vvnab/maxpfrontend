@@ -3,7 +3,7 @@ import * as t from './actionTypes'
 
 export const newsSet = (payload) => ({
   type: t.NEWS_SET,
-  payload
+  ...payload
 });
 
 export const newsGet = () => async (dispatch, getState) => {
@@ -17,10 +17,10 @@ export const newsGet = () => async (dispatch, getState) => {
       payload: news
     }));
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     dispatch(newsSet({
       error: true,
-      payload: error
+      payload: error.message
     }));
   }
 };

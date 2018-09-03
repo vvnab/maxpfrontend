@@ -16,13 +16,13 @@ class NewsContainer extends React.Component {
     }
   }
   render() {
-    const {news, error} = this.props;
+    const {payload, error} = this.props;
     return (
       <div>
         <section className={ styles.main }>
-          { !error && <NewsList news={ news } /> }
+          { !error && <NewsList news={ payload } /> }
         </section>
-        { error && <Message type='error' text={ `${news}` } /> }
+        { error && <Message type='error' text={ `${payload}` } /> }
       </div>
       );
   }
@@ -36,7 +36,7 @@ NewsContainer = Loading(NewsContainer);
 
 export default connect(state => ({
   error: state.news.error,
-  news: state.news.payload || [],
+  payload: state.news.payload || [],
   loading: state.news.loading
 }), {
   newsGet: actions.newsGet

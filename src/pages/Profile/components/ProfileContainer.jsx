@@ -13,7 +13,7 @@ import styles from './index.module.css';
 class ProfileContainer extends Component {
   componentWillMount = () => {
     if (!this.props.profile) {
-      this.props.userGetProfile();
+      this.props.userGetProfile(this.props.login.payload.id);
     }
   }
   render() {
@@ -38,7 +38,8 @@ ProfileContainer = Loading(ProfileContainer);
 ProfileContainer = connect(state => ({
   profile: state.profile.payload,
   error: state.profile.error,
-  loading: state.profile.loading
+  loading: state.profile.loading,
+  login: state.login
 }), {
   userGetProfile: actions.userGetProfile
 })(ProfileContainer)

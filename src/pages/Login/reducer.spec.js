@@ -2,41 +2,41 @@ import reducer, { initialState } from './reducer';
 import * as t from './actionTypes';
 
 describe('News reducer', () => {
-  it('NEWS_SET - loading', () => {
+  it('USER_LOGIN - loading', () => {
     const action = {
-      type: t.NEWS_SET,
-      loading: true,
-      error: null
+      type: t.USER_LOGIN,
+      loading: true
     }
     expect(reducer(initialState, action)).toEqual({
       ...initialState,
       loading: true
     });
   })
-  it('NEWS_SET - loaded', () => {
+  it('USER_LOGIN - loaded', () => {
     const stateBefore = {
       ...initialState,
       loading: true
     }
     const action = {
-      type: t.NEWS_SET,
-      error: null,
+      type: t.USER_LOGIN,
       loading: false,
-      payload: [1, 2]
+      payload: {
+        id: 1
+      }
     }
     expect(reducer(stateBefore, action)).toEqual({
       ...stateBefore,
       loading: false,
-      payload: action.payload
+      ...action.payload
     });
   })
-  it('NEWS_SET - error', () => {
+  it('USER_LOGIN - error', () => {
     const stateBefore = {
       ...initialState,
       loading: true
     }
     const action = {
-      type: t.NEWS_SET,
+      type: t.USER_LOGIN,
       loading: false,
       error: 'error'
     }

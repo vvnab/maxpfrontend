@@ -1,7 +1,8 @@
 import api from '../../api';
+import * as t from './actionTypes'
 
 export const userSet = (payload) => ({
-  type: 'USER/LOGIN',
+  type: t.USER_LOGIN,
   payload
 });
 
@@ -19,15 +20,15 @@ export const userLogin = (data) => async (dispatch) => {
       payload: user
     }));
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     dispatch(userSet({
       error: true,
-      payload: error
+      payload: error.message
     }));
   }
 };
 
 export const userLogout = () => ({
-  type: 'USER/LOGOUT'
+  type: t.USER_LOGOUT
 });
 

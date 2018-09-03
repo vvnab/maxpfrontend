@@ -1,16 +1,17 @@
 import api from '../../api';
+import * as t from './actionTypes';
 
 export const userSetProfile = (payload) => ({
-  type: 'USER/SET_PROFILE',
+  type: t.SET_PROFILE,
   payload
 });
 
-export const userGetProfile = () => async (dispatch, getState) => {
+export const userGetProfile = (id) => async (dispatch) => {
   dispatch(userSetProfile({
     loading: true
   }));
   try {
-    const profile = await api.getUserProfile(getState().login.payload.id);
+    const profile = await api.getUserProfile(id);
     // update profile
     profile.social = profile.social.map(i => {
       let icon;
@@ -30,10 +31,10 @@ export const userGetProfile = () => async (dispatch, getState) => {
       payload: profile
     }));
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     dispatch(userSetProfile({
       error: true,
-      payload: error
+      payload: error.message
     }));
   }
 };

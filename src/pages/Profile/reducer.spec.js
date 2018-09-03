@@ -1,42 +1,46 @@
 import reducer, { initialState } from './reducer';
 import * as t from './actionTypes';
 
-describe('News reducer', () => {
-  it('NEWS_SET - loading', () => {
+describe('Profile reducer', () => {
+  it('SET_PROFILE - loading', () => {
     const action = {
-      type: t.NEWS_SET,
+      type: t.SET_PROFILE,
       loading: true,
       error: null
     }
     expect(reducer(initialState, action)).toEqual({
       ...initialState,
-      loading: true
+      loading: true,
+      error: null
     });
   })
-  it('NEWS_SET - loaded', () => {
+  it('SET_PROFILE - loaded', () => {
     const stateBefore = {
       ...initialState,
-      loading: true
+      loading: true,
+      error: null
     }
     const action = {
-      type: t.NEWS_SET,
+      type: t.SET_PROFILE,
       error: null,
       loading: false,
-      payload: [1, 2]
+      payload: {
+        name: 'vvnab'
+      }
     }
     expect(reducer(stateBefore, action)).toEqual({
       ...stateBefore,
       loading: false,
-      payload: action.payload
+      ...action.payload
     });
   })
-  it('NEWS_SET - error', () => {
+  it('SET_PROFILE - error', () => {
     const stateBefore = {
       ...initialState,
       loading: true
     }
     const action = {
-      type: t.NEWS_SET,
+      type: t.SET_PROFILE,
       loading: false,
       error: 'error'
     }
