@@ -10,7 +10,9 @@ import styles from './index.module.css';
 class LoginForm extends Component {
   state = {
     email: 'max@test.com',
-    password: '12345'
+    password: '12345',
+  // email: '',
+  // password: ''
   }
   componentWillMount = () => {
     if (this.props.location.pathname === '/logout') {

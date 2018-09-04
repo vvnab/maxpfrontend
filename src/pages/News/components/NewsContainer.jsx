@@ -11,7 +11,7 @@ import styles from './index.module.css';
 
 class NewsContainer extends React.Component {
   componentWillMount() {
-    if (!this.props.error && !this.props.news.length) {
+    if (!this.props.error && !this.props.payload.length) {
       this.props.newsGet();
     }
   }

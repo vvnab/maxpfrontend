@@ -27,7 +27,11 @@ describe('News async actions', () => {
       body: {
         data: {
           userId: 1,
-          social: []
+          social: [{
+            label: 'other'
+          }, {
+            label: 'web'
+          }]
         },
         status: 'ok'
       }
@@ -37,7 +41,13 @@ describe('News async actions', () => {
     }), userSetProfile({
       payload: {
         userId: 1,
-        social: []
+        social: [{
+          label: 'web',
+          icon: 'fas fa-globe'
+        }, {
+          label: 'other',
+          icon: 'fab fa-other'
+        }]
       }
     })];
     const store = mockStore({})
