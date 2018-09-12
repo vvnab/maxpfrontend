@@ -18,6 +18,3 @@ https://github.com/maxfarseer/tz-webinars/tree/tz-2-react-redux-router-async
 
 ## Демо
 https://young-refuge-72710.herokuapp.com/
-
-## Обновление демо
-    git push heroku master
