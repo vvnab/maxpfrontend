@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsList NewsList empty renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewsList
+    news={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): false,
+  Symbol(enzyme.__nodes__): Array [
+    false,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`NewsList NewsList render renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NewsList
+    news={
+        Array [
+            Object {
+              "id": 1,
+              "text": "text-1",
+              "title": "title-1",
+            },
+            Object {
+              "id": 2,
+              "text": "text-2",
+              "title": "title-2",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <ol>
+          <li>
+                    <h4>
+                              title-1
+                    </h4>
+                    <p>
+                              text-1
+                    </p>
+          </li>
+          <li>
+                    <h4>
+                              title-2
+                    </h4>
+                    <p>
+                              text-2
+                    </p>
+          </li>
+</ol>,
+        <br />,
+        <strong>
+          всего новостей: 2
+</strong>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              <h4>
+                            title-1
+              </h4>
+              <p>
+                            text-1
+              </p>
+</li>,
+            <li>
+              <h4>
+                            title-2
+              </h4>
+              <p>
+                            text-2
+              </p>
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  title-1
+</h4>,
+                <p>
+                  text-1
+</p>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "title-1",
+                },
+                "ref": null,
+                "rendered": "title-1",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "text-1",
+                },
+                "ref": null,
+                "rendered": "text-1",
+                "type": "p",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  title-2
+</h4>,
+                <p>
+                  text-2
+</p>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "title-2",
+                },
+                "ref": null,
+                "rendered": "title-2",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "text-2",
+                },
+                "ref": null,
+                "rendered": "text-2",
+                "type": "p",
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ol",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "всего новостей: 2",
+        },
+        "ref": null,
+        "rendered": "всего новостей: 2",
+        "type": "strong",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ol>
+            <li>
+                        <h4>
+                                    title-1
+                        </h4>
+                        <p>
+                                    text-1
+                        </p>
+            </li>
+            <li>
+                        <h4>
+                                    title-2
+                        </h4>
+                        <p>
+                                    text-2
+                        </p>
+            </li>
+</ol>,
+          <br />,
+          <strong>
+            всего новостей: 2
+</strong>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                <h4>
+                                title-1
+                </h4>
+                <p>
+                                text-1
+                </p>
+</li>,
+              <li>
+                <h4>
+                                title-2
+                </h4>
+                <p>
+                                text-2
+                </p>
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h4>
+                    title-1
+</h4>,
+                  <p>
+                    text-1
+</p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "title-1",
+                  },
+                  "ref": null,
+                  "rendered": "title-1",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "text-1",
+                  },
+                  "ref": null,
+                  "rendered": "text-1",
+                  "type": "p",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h4>
+                    title-2
+</h4>,
+                  <p>
+                    text-2
+</p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "title-2",
+                  },
+                  "ref": null,
+                  "rendered": "title-2",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "text-2",
+                  },
+                  "ref": null,
+                  "rendered": "text-2",
+                  "type": "p",
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ol",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "всего новостей: 2",
+          },
+          "ref": null,
+          "rendered": "всего новостей: 2",
+          "type": "strong",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

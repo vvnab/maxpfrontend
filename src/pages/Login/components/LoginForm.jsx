@@ -7,7 +7,7 @@ import Message from '../../../components/Message';
 
 import styles from './index.module.css';
 
-class LoginForm extends Component {
+export class LoginForm extends Component {
   state = {
     email: 'max@test.com',
     password: '12345',
@@ -62,7 +62,7 @@ class LoginForm extends Component {
     const {loading, payload, error} = this.props.user;
     const {email, password, fieldError, fieldErrorMessage} = this.state;
     const someError = error || fieldError;
-    const errorMessage = fieldErrorMessage || (error && payload.message);
+    const errorMessage = fieldErrorMessage || (error && payload);
     return (
       <div>
         <section className={ styles.main }>
@@ -92,7 +92,9 @@ class LoginForm extends Component {
 }
 
 LoginForm.propsTypes = {
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired
 }
 
 export default LoginForm;

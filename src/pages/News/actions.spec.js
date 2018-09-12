@@ -19,7 +19,7 @@ describe('News async actions', () => {
     fetchMock.restore();
   });
 
-  it('newsGet', () => {
+  it('newsGet ok', () => {
     fetchMock.getOnce(`${API_ROOT}/news`, {
       headers: {
         'content-type': 'application/json'
@@ -41,7 +41,7 @@ describe('News async actions', () => {
     })
   })
 
-  it('newsGet', () => {
+  it('newsGet error', () => {
     fetchMock.getOnce(`${API_ROOT}/news`, {
       headers: {
         'content-type': 'application/json'

@@ -8,8 +8,8 @@ class Profile extends Component {
     const {profile} = this.props;
     return profile && <div className={ styles.profile }>
                         <div>
-                          <b>Город</b>:
-                          { profile.city }
+                          <b>Город</b>
+                          { `: ${profile.city}` }
                         </div>
                         <br/>
                         <div>

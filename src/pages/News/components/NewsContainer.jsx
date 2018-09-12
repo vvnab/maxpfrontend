@@ -9,7 +9,7 @@ import * as actions from '../actions';
 import NewsList from './NewsList';
 import styles from './index.module.css';
 
-class NewsContainer extends React.Component {
+export class NewsContainer extends React.Component {
   componentWillMount() {
     if (!this.props.error && !this.props.payload.length) {
       this.props.newsGet();
@@ -18,21 +18,19 @@ class NewsContainer extends React.Component {
   render() {
     const {payload, error} = this.props;
     return (
-      <div>
+      <React.Fragment>
         <section className={ styles.main }>
           { !error && <NewsList news={ payload } /> }
         </section>
         { error && <Message type='error' text={ `${payload}` } /> }
-      </div>
+      </React.Fragment>
       );
   }
 }
 
 NewsContainer.propTypes = {
-  news: PropTypes.array.isRequired
+  payload: PropTypes.any.isRequired
 }
-
-NewsContainer = Loading(NewsContainer);
 
 export default connect(state => ({
   error: state.news.error,
@@ -40,4 +38,4 @@ export default connect(state => ({
   loading: state.news.loading
 }), {
   newsGet: actions.newsGet
-})(NewsContainer);
+})(Loading(NewsContainer));

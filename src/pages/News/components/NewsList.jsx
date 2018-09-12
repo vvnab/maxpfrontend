@@ -14,7 +14,7 @@ const NewsList = ({news}) => {
                                 )) }
                             </ol>
                             <br/>
-                            <strong> { `всего новостей: ${news.length}` } </strong>
+                            <strong>{ `всего новостей: ${news.length}` }</strong>
                           </div>
 }
 
