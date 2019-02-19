@@ -10,13 +10,39 @@ describe('LoginForm', () => {
     },
     history: '',
     userLogout: () => {
+    },
+    userLogin: () => {
     }
   }
   const initialState = {
     email: 'max@test.com',
     password: '12345'
   }
-  
+
+  describe('Login init state', () => {
+    const mockUserLogin = jest.fn();
+    const nextProps = {
+      ...props,
+      userLogin: mockUserLogin
+    }
+    const loginForm = shallow(<LoginForm {...nextProps} />);
+    it('init', () => {
+      loginForm.setState(initialState);
+      expect(loginForm.state()).toEqual(initialState);
+    })
+  })
+  // describe('Login handlers', () => {
+  //   const loginForm = shallow(<LoginForm {...nextProps} />);
+  //   beforeEach(() => {
+  //     loginForm.find('[name="email"]').simulate('change', {
+
+  //     })
+  //   })
+  //   it('init', () => {
+  //     loginForm.setState(initialState);
+  //     expect(loginForm.state()).toEqual(initialState);
+  //   })
+  // })
   describe('Login ok', () => {
     const nextProps = {
       ...props,

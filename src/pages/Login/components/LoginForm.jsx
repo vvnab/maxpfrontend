@@ -64,7 +64,7 @@ export class LoginForm extends Component {
     const someError = error || fieldError;
     const errorMessage = fieldErrorMessage || (error && payload);
     return (
-      <div>
+      <React.Fragment>
         <section className={ styles.main }>
           <form onSubmit={ this.handleSubmit }>
             <fieldset>
@@ -86,7 +86,7 @@ export class LoginForm extends Component {
           </form>
         </section>
         { someError && <Message type='error' text={ errorMessage } /> }
-      </div>
+        </React.Fragment>
       );
   }
 }
